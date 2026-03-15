@@ -53,6 +53,7 @@ fetch('/', {
 function panicMode() {
     document.body.style.transition = 'background 0.1s';
     let blinks = 0;
+    const wrapper = document.getElementById('results-wrapper');
     wrapper.innerHTML = `
         <div style="
             background: rgba(0,200,255,0.05);
@@ -91,7 +92,6 @@ function panicMode() {
         if (blinks > 30) {
             clearInterval(blink);
             document.body.style.background = '';
-            const wrapper = document.getElementById('results-wrapper');
         }
     }, 100);
 
