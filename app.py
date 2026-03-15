@@ -115,4 +115,4 @@ def get_chlorophyll_salinity(lat, lng):
         salinity = 34.0 
     return chlorophyll, salinity
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
