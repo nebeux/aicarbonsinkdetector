@@ -56,7 +56,6 @@ function panicMode() {
     const blink = setInterval(() => {
         document.body.style.background = blinks % 2 === 0 ? '#ff000033' : 'transparent';
         blinks++;
-        document.getElementById('randomh1').textContent = ""
         if (blinks > 10) {
             clearInterval(blink);
             document.body.style.background = '';
