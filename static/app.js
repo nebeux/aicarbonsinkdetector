@@ -53,14 +53,7 @@ fetch('/', {
 function panicMode() {
     document.body.style.transition = 'background 0.1s';
     let blinks = 0;
-    const blink = setInterval(() => {
-        document.body.style.background = blinks % 2 === 0 ? '#ff000033' : 'transparent';
-        blinks++;
-        if (blinks > 10) {
-            clearInterval(blink);
-            document.body.style.background = '';
-            const wrapper = document.getElementById('results-wrapper');
-            wrapper.innerHTML = `
+    wrapper.innerHTML = `
         <div style="
             background: rgba(0,200,255,0.05);
             border: 1px solid rgba(0,200,255,0.2);
@@ -92,7 +85,13 @@ function panicMode() {
             </p>
         </div>
     `;
-
+    const blink = setInterval(() => {
+        document.body.style.background = blinks % 2 === 0 ? '#ff000033' : 'transparent';
+        blinks++;
+        if (blinks > 30) {
+            clearInterval(blink);
+            document.body.style.background = '';
+            const wrapper = document.getElementById('results-wrapper');
         }
     }, 100);
 
