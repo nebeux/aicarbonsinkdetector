@@ -12,7 +12,7 @@ month_names = {
     9: "SEP", 10: "OCT", 11: "NOV", 12: "DEC"
 }
 app = Flask(__name__)
-with open('model\carbon_sink_model.pkl', 'rb') as f:
+with open('model/carbon_sink_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 
