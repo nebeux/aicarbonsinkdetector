@@ -11,7 +11,7 @@ This file lists the libraries required for the project in case you plan to run i
 
 ## model (folder)
 ### carbon_sink_model.pkl
-This was the model we used to generate our carbon sink value. 
+This was the model we used to generate our carbon sink value. It is a gradient boosting regressor model.
 
 ## carbon_sink_20k.csv
 This was the training data used to train our model. Feel free to take a look through the 20k lines of simulated data we had 😂
